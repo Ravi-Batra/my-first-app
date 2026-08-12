@@ -5,13 +5,24 @@
     <title>My First App</title>
     <style>
       .call-button {
-        display: inline-block;
-        padding: 12px 20px;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 420px;
+        padding: 14px 20px;
         color: #fff;
-        background: #0a7a32;
-        border-radius: 6px;
-        font: 600 16px/1.2 Arial, sans-serif;
+        background: linear-gradient(#2689f4, #0a5fc4);
+        border: 1px solid #064d9e;
+        border-radius: 8px;
+        box-shadow: 0 4px 0 #064d9e, 0 6px 10px rgb(0 0 0 / 20%);
+        font: 700 18px/1.2 Arial, sans-serif;
+        text-align: center;
         text-decoration: none;
+      }
+
+      .call-button:active {
+        transform: translateY(3px);
+        box-shadow: 0 1px 0 #064d9e;
       }
     </style>
   </head>
