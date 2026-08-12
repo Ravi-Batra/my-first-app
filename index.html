@@ -22,6 +22,25 @@
         animation: call-shine 2.8s ease-in-out infinite;
       }
 
+      .call-action {
+        position: relative;
+        max-width: 420px;
+      }
+
+      .call-action .call-button {
+        min-height: 72px;
+        padding-right: 122px;
+      }
+
+      .receptionist {
+        position: absolute;
+        z-index: 1;
+        right: -4px;
+        bottom: -4px;
+        width: 155px;
+        pointer-events: none;
+      }
+
       .call-button:active {
         animation-play-state: paused;
         transform: translateY(3px);
@@ -43,10 +62,23 @@
           animation: none;
         }
       }
+
+      @media (max-width: 360px) {
+        .call-action .call-button {
+          padding-right: 102px;
+        }
+
+        .receptionist {
+          width: 132px;
+        }
+      }
     </style>
   </head>
   <body>
     <h1>Merge 8</h1>
-    <a class="call-button" href="tel:+919899781169">Call Us</a>
+    <div class="call-action">
+      <a class="call-button" href="tel:+919899781169">Call Us</a>
+      <img class="receptionist" src="assets/receptionist.png" alt="Friendly receptionist">
+    </div>
   </body>
 </html>
