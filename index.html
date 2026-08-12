@@ -11,14 +11,15 @@
         max-width: 420px;
         padding: 14px 20px;
         color: #fff;
-        background: linear-gradient(#2689f4, #0a5fc4);
+        background: linear-gradient(110deg, #0a5fc4 35%, #63b2ff 50%, #0a5fc4 65%);
+        background-size: 220% 100%;
         border: 1px solid #064d9e;
         border-radius: 8px;
         box-shadow: 0 4px 0 #064d9e, 0 6px 10px rgb(0 0 0 / 20%);
         font: 700 18px/1.2 Arial, sans-serif;
         text-align: center;
         text-decoration: none;
-        animation: call-attention 1.8s ease-in-out infinite;
+        animation: call-shine 2.8s ease-in-out infinite;
       }
 
       .call-button:active {
@@ -27,13 +28,13 @@
         box-shadow: 0 1px 0 #064d9e;
       }
 
-      @keyframes call-attention {
-        0%, 100% {
-          transform: translateY(0);
+      @keyframes call-shine {
+        0%, 35% {
+          background-position: 100% 0;
         }
 
-        50% {
-          transform: translateY(-5px);
+        70%, 100% {
+          background-position: 0 0;
         }
       }
 
