@@ -18,11 +18,29 @@
         font: 700 18px/1.2 Arial, sans-serif;
         text-align: center;
         text-decoration: none;
+        animation: call-attention 1.8s ease-in-out infinite;
       }
 
       .call-button:active {
+        animation-play-state: paused;
         transform: translateY(3px);
         box-shadow: 0 1px 0 #064d9e;
+      }
+
+      @keyframes call-attention {
+        0%, 100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .call-button {
+          animation: none;
+        }
       }
     </style>
   </head>
