@@ -2,9 +2,84 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My First App</title>
+    <style>
+      .call-button {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 420px;
+        padding: 14px 20px;
+        color: #fff;
+        background: linear-gradient(110deg, #0a5fc4 35%, #63b2ff 50%, #0a5fc4 65%);
+        background-size: 220% 100%;
+        border: 1px solid #064d9e;
+        border-radius: 8px;
+        box-shadow: 0 4px 0 #064d9e, 0 6px 10px rgb(0 0 0 / 20%);
+        font: 700 18px/1.2 Arial, sans-serif;
+        text-align: center;
+        text-decoration: none;
+        animation: call-shine 2.8s ease-in-out infinite;
+      }
+
+      .call-action {
+        position: relative;
+        max-width: 420px;
+      }
+
+      .call-action .call-button {
+        min-height: 72px;
+        padding-right: 122px;
+      }
+
+      .receptionist {
+        position: absolute;
+        z-index: 1;
+        right: -4px;
+        bottom: -4px;
+        width: 155px;
+        pointer-events: none;
+      }
+
+      .call-button:active {
+        animation-play-state: paused;
+        transform: translateY(3px);
+        box-shadow: 0 1px 0 #064d9e;
+      }
+
+      @keyframes call-shine {
+        0%, 35% {
+          background-position: 100% 0;
+        }
+
+        70%, 100% {
+          background-position: 0 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .call-button {
+          animation: none;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .call-action .call-button {
+          padding-right: 102px;
+        }
+
+        .receptionist {
+          width: 132px;
+        }
+      }
+    </style>
   </head>
   <body>
     <h1>Merge 8</h1>
+    <div class="call-action">
+      <a class="call-button" href="tel:+919899781169">Call Us</a>
+      <img class="receptionist" src="assets/receptionist.webp" alt="Friendly receptionist">
+    </div>
   </body>
 </html>
